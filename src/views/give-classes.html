@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <meta name="theme-color" content="#577de5">
+
+   <!--Links & Styles-->
+   <link rel="stylesheet" href="./css/main.css">
+   <link rel="stylesheet" href="./css/partials/header.css">
+   <link rel="stylesheet" href="./css/partials/forms.css">
+   <link rel="stylesheet" href="./css/partials/page-give-classes.css">
+   <link
+      href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;600;700&amp;family=Poppins:wght@400;600&amp;display=swap"
+      rel="stylesheet">
+   <link rel="shortcut icon" href="./img/favicon.png" type="image/png">
+
+   <title>Proffy</title>
+</head>
+
+<body id="page-give-classes">
+   <div id="container">
+      <div class="logo-container">
+         <header class="page-header">
+            <div class="top-bar-container">
+               <a href="./"><img src="./img/icons/back.svg" alt="Voltar"></a>
+               <img src="./img/logo.svg" alt="Proffy">
+            </div>
+
+            <div class="header-content">
+               <strong>How amazing that you want to teach!</strong>
+               <p>The first step is to fill out this application form</p>
+            </div>
+         </header>
+
+         <main>
+            <form action="" id="create-class">
+               <fieldset>
+                  <legend>Your data</legend>
+                  <div class="input-block">
+                     <label for="name">Full name</label>
+                     <input name="name" id="name" required>
+                  </div>
+
+                  <div class="input-block">
+                     <label for="avatar">Link to your photo <small>(start with https: //)</small></label>
+                     <input name="avatar" id="avatar" type="url" required>
+                  </div>
+
+                  <div class="input-block">
+                     <label for="whatsapp">Whatsapp <small>(only numbers)</small></label>
+                     <input name="whatsapp" id="whatsapp" type="number" required>
+                  </div>
+
+                  <div class="textarea-block">
+                     <label for="bio">Biography</label>
+                     <textarea name="bio" id="bio" required></textarea>
+                  </div>
+               </fieldset>
+
+               <fieldset>
+                  <legend>About the class</legend>
+                  <div class="select-block">
+                     <label for="subject" id="subject">Subjects</label>
+                     <select name="subject" id="subject" required>
+                        <option value="">Select an option</option>
+
+                        {%for subject in subjects %}
+                        <option value="{{loop.index}}">{{subject}}
+                        </option>
+                        {%endfor %}
+                     </select>
+                  </div>
+
+                  <div class="input-block">
+                     <label for="cost">Cost of your hour/class <small>(R$)</small></label>
+                     <input name="cost" id="cost" type="number" required>
+                  </div>
+
+
+               </fieldset>
+
+               <fieldset id="schedule-items">
+                  <legend>Available times
+                     <button type="button" id="add-time">+ New Time</button>
+                  </legend>
+
+                  <div class="schedule-item">
+                     <div class="select-block">
+                        <label for="weekday">Weekday</label>
+                        <select name="weekday[]" required>
+                           <option value="">Select an option</option>
+
+                           {%for day in weekdays %}
+                           <option value="{{loop.index}}">{{day}}
+                           </option>
+                           {%endfor %}
+                        </select>
+                     </div>
+
+                     <div class="input-block">
+                        <label for="time_from">From</label>
+                        <input type="time" name="time_from[]" required>
+                     </div>
+
+                     <div class="input-block">
+                        <label for="time_to">To</label>
+                        <input type="time" name="time_to[]" required>
+                     </div>
+                  </div>
+
+               </fieldset>
+            </form>
+
+            <footer>
+               <p>
+                  <img src="./img/icons/warning.svg" alt="Important warning">
+                  Important! <br> Fill in all the data!
+               </p>
+               <button type="submit" form="create-class">Save registration</button>
+            </footer>
+         </main>
+      </div>
+   </div>
+
+   <script src="./js/addField.js"></script>
+</body>
+
+</html>
