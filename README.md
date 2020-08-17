@@ -1,4 +1,4 @@
-# :fast_forward: Proffy :rewind:
+<h1 align = "center"> :fast_forward: Proffy :rewind: </h1>
 
 ## 🖥 Preview
 <p align = "center">
