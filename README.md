@@ -2,7 +2,7 @@
 
 ## 🖥 Preview
 <p align = "center">
-  <img src = "https://raw.githubusercontent.com/ecpieritz/proffy/master/public/img/proffy-print.jpg" width = "700">
+  <img src = "https://raw.githubusercontent.com/ecpieritz/proffy/master/public/img/proffy-print.jpg" width = "800">
 </p>
 
 ---
