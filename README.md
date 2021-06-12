@@ -27,7 +27,7 @@
 
 ## 🚀 How to execute the project
 #### Clone the repository
-git clone https://github.com/EPieritz/proffy.git
+git clone https://github.com/ecpieritz/proffy.git
 
 #### Enter directory
 `cd proffy`
